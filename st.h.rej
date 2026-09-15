@@ -1,0 +1,28 @@
+diff a/st.h b/st.h	(rejected hunks)
+@@ -87,6 +244,7 @@
+ void toggleprinter(const Arg *);
+ 
+ int tattrset(int);
++int tisaltscr(void);
+ void tnew(int, int);
+ void tresize(int, int);
+ void tsetdirtattr(int);
+@@ -111,6 +270,8 @@
+ void *xrealloc(void *, size_t);
+ char *xstrdup(const char *);
+ 
++int xgetcolor(int x, unsigned char *r, unsigned char *g, unsigned char *b);
++
+ /* config.h globals */
+ extern char *utmp;
+ extern char *scroll;
+@@ -124,3 +285,9 @@
+ extern unsigned int defaultfg;
+ extern unsigned int defaultbg;
+ extern unsigned int defaultcs;
++
++extern DC dc;
++extern XWindow xw;
++extern XSelection xsel;
++extern TermWindow win;
++extern Term term;
